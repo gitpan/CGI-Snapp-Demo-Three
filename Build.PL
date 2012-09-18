@@ -4,7 +4,7 @@ Module::Build -> new
 (
  module_name    => 'CGI::Snapp::Demo::Three',
  license        => 'artistic',
- dist_abstract  => 'A template-free demo of CGI::Snapp using CGI::Snapp::Plugin::Forward',
+ dist_abstract  => 'A template-free demo of CGI::Snapp using the forward() method',
  dist_author    => 'Ron Savage <ron@savage.net.au>',
  build_requires =>
  {
@@ -17,15 +17,14 @@ Module::Build -> new
  },
  requires =>
  {
-	 CGI                         => 3.00,
-	 CGI::Emulate::PSGI          => 0.14,
-	 CGI::Snapp                  => 1.00,
-	 CGI::Snapp::Plugin::Forward => 1.00,
-	 parent                      => 0,
+	 CGI                => 3.00,
+	 CGI::Emulate::PSGI => 0.14,
+	 CGI::Snapp         => 1.02,
+	 parent             => 0,
 	 # Don't make user install Plack.
-	 # Plack                     => 0.9985,
-	 # Starman                   => 0.3000,
-	 strict                      => 1.03,
-	 warnings                    => 1.03,
+	 # Plack            => 0.9985,
+	 # Starman          => 0.3000,
+	 strict             => 1.03,
+	 warnings           => 1.03,
  },
 ) -> create_build_script();
